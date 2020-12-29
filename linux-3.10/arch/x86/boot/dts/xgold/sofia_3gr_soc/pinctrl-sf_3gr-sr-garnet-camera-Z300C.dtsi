@@ -1,0 +1,54 @@
+cam1_default_pins:cam1_default_pins {
+	pinctrl-single,pins = <
+		0x2f4 0x1500	/* cam1_pd PCL_61 DIF_D11*/
+		0x314 0x1500	/* cam1_1v2 PCL_69 DIF_D19 */
+	>;
+};
+cam1_inactive_pins:cam1_inactive_pins {
+	pinctrl-single,pins = <
+		0x2f4 0x2100	/* cam1_pd PCL_61 DIF_D11*/
+		0x314 0x2100	/* cam1_1v2 PCL_69 DIF_D19 */
+	>;
+};
+cam1_sleep_pins:cam1_sleep_pins {
+	pinctrl-single,pins = <
+		0x2f4 0x1500	/* cam1_pd PCL_61 DIF_D11*/
+		0x314 0x1500	/* cam1_1v2 PCL_69 DIF_D19 */
+	>;
+};
+cam2_default_pins:cam2_default_pins {
+	pinctrl-single,pins = <
+		0x324 0x1500	/* cam2_pd PCL_73 DIF_D23 */
+	>;
+};
+cam2_inactive_pins:cam2_inactive_pins {
+	pinctrl-single,pins = <
+		0x324 0x2100	/* cam2_pd PCL_73 DIF_D23 */
+	>;
+};
+cam2_sleep_pins:cam2_sleep_pins {
+	pinctrl-single,pins = <
+		0x324 0x1500	/* cam2_pd PCL_73 DIF_D23 */
+	>;
+};
+i2c1_default_pins:i2c1_default_pins {
+	pinctrl-single,pins = <
+		0x350 0x10011	/* i2c1_scl */
+		0x354 0x10011	/* i2c1_sda */
+		0x3a4 0x1010 /*mclk*/
+	>;
+};
+i2c1_inactive_pins:i2c1_inactive_pins {
+	pinctrl-single,pins = <
+		0x350 0x100	/* i2c1_scl */
+		0x354 0x100	/* i2c1_sda */
+		0x3a4 0x1410 /*mclk*/
+	>;
+};
+i2c1_sleep_pins:i2c1_sleep_pins {
+	pinctrl-single,pins = <
+		0x350 0x100	/* i2c1_scl */
+		0x354 0x100	/* i2c1_sda */
+		0x3a4 0x1410 /*mclk*/
+	>;
+};

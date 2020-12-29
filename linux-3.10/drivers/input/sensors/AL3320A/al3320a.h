@@ -1,0 +1,58 @@
+
+#ifndef _LINUX_AL3320A
+#define _LINUX_AL3320A
+
+//	define for IOCTL ++
+#define LIGHTSENSOR_IOCTL_MAGIC 'l'
+#define LIGHTSENSOR_IOCTL_GET_INIT			_IOR(LIGHTSENSOR_IOCTL_MAGIC, 1, int *) 
+#define LIGHTSENSOR_IOCTL_ENABLE				_IOW(LIGHTSENSOR_IOCTL_MAGIC, 2, int *)
+#define LIGHTSENSOR_IOCTL_GET_LUX				_IOR(LIGHTSENSOR_IOCTL_MAGIC, 3, int *)
+#define LIGHTSENSOR_IOCTL_GET_ADC				_IOR(LIGHTSENSOR_IOCTL_MAGIC, 4, int *)
+#define LIGHTSENSOR_IOCTL_GET_CONFIG			_IOR(LIGHTSENSOR_IOCTL_MAGIC, 5, int *)
+#define LIGHTSENSOR_IOCTL_CAL_START			_IOR(LIGHTSENSOR_IOCTL_MAGIC, 6, int *)
+#define LIGHTSENSOR_IOCTL_CAL_END				_IOR(LIGHTSENSOR_IOCTL_MAGIC, 7, int *)
+#define LIGHTSENSOR_IOCTL_CAL_INIT				_IOR(LIGHTSENSOR_IOCTL_MAGIC, 8, int *)
+//	define for IOCTL --
+
+//	define for al3320a address ++
+#define ADDR_ALS_SYS_CONFIG		0x00
+#define ADDR_ALS_FLAG_STATUS		0x01
+#define ADDR_ALS_INT_CONFIG		0x02
+#define ADDR_ALS_WAITING			0x06
+#define ADDR_ALS_GAIN				0x07
+#define ADDR_ALS_PERSIST			0x08
+#define ADDR_ALS_MEAN_TIME		0x09
+#define ADDR_ALS_DATA_LOW			0x22
+#define ADDR_ALS_DATA_HIGH		0x23
+#define ADDR_ALS_THRES_LOW_L		0x30
+#define ADDR_ALS_THRES_LOW_H		0x31
+#define ADDR_ALS_THRES_HIGH_L		0x32
+#define ADDR_ALS_THRES_HIGH_H		0x33
+#define ADDR_ALS_CALIBRATION		0x34
+//	define for al3320a address --
+
+//	define for al3320a address ++
+#define INDEX_ALS_SYS_CONFIG		0
+#define INDEX_ALS_FLAG_STATUS		1
+#define INDEX_ALS_INT_CONFIG		2
+#define INDEX_ALS_WAITING			3
+#define INDEX_ALS_GAIN				4
+#define INDEX_ALS_PERSIST			5
+#define INDEX_ALS_MEAN_TIME		6
+#define INDEX_ALS_DATA_LOW		7
+#define INDEX_ALS_DATA_HIGH		8
+#define INDEX_ALS_THRES_LOW_L		9
+#define INDEX_ALS_THRES_LOW_H		10
+#define INDEX_ALS_THRES_HIGH_L	11
+#define INDEX_ALS_THRES_HIGH_H	12
+#define INDEX_ALS_CALIBRATION		13
+//	define for al3320a address --
+
+
+
+struct al3320a_i2c_platform_data {
+	
+	int int_gpio;
+};
+
+#endif /* _LINUX_AL3320A */
